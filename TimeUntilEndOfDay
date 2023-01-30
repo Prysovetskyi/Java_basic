@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class TimeUntilEndOfDay {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the current hour (0-23): ");
+        int currentHour = sc.nextInt();
+        System.out.print("Enter the current minute (0-59): ");
+        int currentMinute = sc.nextInt();
+
+        
+        int totalSeconds = (17 - currentHour) * 3600 + (60 - currentMinute) * 60;
+        
+        int totalMinutes = totalSeconds / 60;
+        
+        int totalHours = totalMinutes / 60;
+        
+        System.out.println("Total seconds until the end of the day: " + totalSeconds);
+        System.out.println("Total minutes until the end of the day: " + totalMinutes);
+        System.out.println("Total hours until the end of the day: " + totalHours);
+    }
+}
