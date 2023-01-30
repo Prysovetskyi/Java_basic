@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class CoffeeMachine {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of the drink you want to make (1-4): ");
+        int drinkNumber = sc.nextInt();
+
+        switch (drinkNumber) {
+            case 1:
+                makeEspresso();
+                break;
+            case 2:
+                makeAmericano();
+                break;
+            case 3:
+                makeCappuccino();
+                break;
+            case 4:
+                makeTea();
+                break;
+            default:
+                System.out.println("Invalid drink number. Please enter a number between 1 and 4.");
+                break;
+        }
+    }
+
+    public static void makeEspresso() {
+        System.out.println("Making espresso...");
+       
+    }
+
+    public static void makeAmericano() {
+        System.out.println("Making americano...");
+        makeEspresso();
+        System.out.println("Adding water...");
+        
+    }
+
+    public static void makeCappuccino() {
+        System.out.println("Making cappuccino...");
+        makeEspresso();
+        System.out.println("Adding foamed milk...");
+       
+    }
+
+    public static void makeTea() {
+        System.out.println("Making tea...");
+        System.out.println("Choosing a tea bag...");
+        // code to choose a tea bag
+        System.out.println("Adding water...");
+       
+    }
+}
