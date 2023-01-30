@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Temperature of Flask 1: ");
+        int temperature1 = input.nextInt();
+        System.out.print("Temperature of Flask 2: ");
+        int temperature2 = input.nextInt();
+        
+        if (temperature1 > 100 && temperature2 < 100) {
+            System.out.println("Device is working correctly.");
+        } else {
+            System.out.println("Device is not working correctly.");
+        }
+    }
+}
